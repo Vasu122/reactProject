@@ -16,11 +16,13 @@ var config = {
 	test : /\.jsx$/,
         loader: "babel-loader",
 	exclude:/node_modules/,
-		
     }
 
 ]
-  }
+  },
+      resolve: {
+		extensions: ['', '.js', '.jsx', '.json']
+	}
 };
  
 module.exports = config;
