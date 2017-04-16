@@ -1,0 +1,33 @@
+
+@import 'customMixin';
+@import 'variable';
+
+body{background:url(../images/bg-signin-divider.png) repeat center center}
+.navbar-inverse{background:$navbarInverse !important; border-color:$navbarInverse !important}
+.banner{
+  & img{
+	max-width:100%;
+	}	
+}
+
+.navbar-brand{height:auto;}
+
+.menubar ul ul{display:none;}
+.menubar ul li:hover ul{
+	display:inline-block; position:absolute; left:0; top:20p; width:200px; border:1px solid $grayLight;
+}
+.menubar ul li ul li{ width:100%;}
+
+/*   Extend/Inheritance */
+
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+h1{ 
+@extend .message;
+}
+
+

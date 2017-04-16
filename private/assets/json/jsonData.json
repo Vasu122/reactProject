@@ -1,0 +1,5 @@
+var Address={
+	Name:'rabindra',
+	Address:'sultanpur',
+	ContactNo:8447995451
+}

@@ -1,0 +1,36 @@
+@import 'variable';
+@import 'customMixin';
+
+
+.customTabContent{
+	padding:50px 20px;
+}
+
+.customTabH {
+	li{
+		div{padding: 10px 0px;
+background: $grayLight;
+margin-right: 5px;
+text-align: center;
+text-transform: uppercase;
+width:200px; height:200px; 
+display:table-cell;
+vertical-align:middle;
+@include border-radius(50%);	
+@include transition(all 0.3s ease-in-out);
+&:hover{background: $grayDark;  color:$white;}	
+			
+	}
+.tab-link-active{ background:$grayDark; color:$white;}		
+   }
+	
+}
+
+.customTabContent{
+border-top:5px solid $grayDark;
+background:$white;
+padding:30px 20px 30px;
+margin-top:50px;
+text-align:center;
+}
+

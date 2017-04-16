@@ -1,20 +1,32 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+
+import { Router, Route, Link, browserHistory, IndexRoute,Redirect  } from 'react-router';
+
+import './assets/scss/style.scss';
+
+import Main from './menu';
+import Home from './Home';
+import About from './Aboutus';
+import Contact from './Contactus';
+import smoothScroll from './component/smoothScroll';
+import Projects from './projects';
 
 
-import HelloApp from './App';
 
-var HelloWorld = React.createClass({
-  render: function() {
-	
-var bgc="red";
-var colorr="#fff";
 
-    return (<div>
-      <p style={{background:bgc,color:colorr}}>Hello React</p>
-	<HelloApp />
-    </div>);
-  }
-});
 
-ReactDOM.render(<HelloWorld />, document.getElementById("container"));
+render(
+    <Router history={browserHistory}>
+        <Route component={Main}>
+            <Route path="/" component={Home}/>
+            <Route path="/about" component={About}/>
+            <Route path="/contact" component={Contact}/>
+	   <Route path="/smoothScroll" component={smoothScroll}/>	
+	   <Route path="/projects" component={Projects} />
+	   
+	   		
+        </Route>
+    </Router>,
+    document.getElementById('main-content')
+);
